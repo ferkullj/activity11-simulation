@@ -76,7 +76,16 @@ Now, create a new simulation.
 In this you will obtain a sample of size 30 from from a Normally distributed variable with a mean 50 and standard deviation 10, and find the mean and standard deviation.
 How do the mean and standard deviation compare to your answers above?
 
+```{r norm sample of 30}
 
+norm_samp_30 <- tibble(
+  values = rnorm( 30, 50, 10)
+)
+mean(norm_samp_30$values)
+sd(norm_samp_30$values)
+
+```
+Since the sample size decreased, the standard deviation increased.
 
 ### Non-normally distributed population
 
@@ -84,7 +93,22 @@ Using a similar process, obtain Exponentially distributed variable (`?rexp`) wit
 Obtain a sample of 1,000 observations and a sample of 30 observations.
 Then, calculate the mean and standard deviation of each sample and discuss how the values are similar and how they differ.
 
+```{r exponential distribution}
 
+rand_exp_1000 <- tibble(
+  values = rexp(n=1000, rate = .02)
+)
+rand_exp_30 <- tibble(
+  values = rexp(n=30, rate = .02)
+)
+
+mean(rand_exp_1000$values)
+mean(rand_exp_30$values)
+sd(rand_exp_1000$values)
+sd(rand_exp_30$values)
+
+```
+For these exponential distribution samples, the sample with the larger n had a higher mean and standard deviation. As expected for an exponential distribution, the mean and standard deviations per sample are roughly equal.
 
 
 ![](README-img/noun_pause.png) **Planned Pause Point**: If you have any questions, contact your instructor. Otherwise feel free to continue on.
