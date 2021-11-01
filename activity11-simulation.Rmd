@@ -1,6 +1,6 @@
 ---
 title: "Activity 11 - Simulation"
-author: "Name"
+author: "Joey Ferkull"
 output: github_document
 ---
 
