@@ -25,7 +25,11 @@ One way to make sure that you get similar results each time is to always run all
 
 For this activity, you will need the `{tidyverse}`.
 
-**delete this line and load `{tidyverse}`**
+```{r load packages}
+
+library(tidyverse)
+
+```
 
 
 ## Exploration
@@ -58,6 +62,13 @@ ggplot(norm_samp_1000, aes(x = values)) +
 ```
 
 Using `norm_samp_1000`, obtain the mean and standard deviation of this sample?
+
+```{r mean and std from sample}
+
+mean(norm_samp_1000$values)
+sd(norm_samp_1000$values)
+
+```
 
 
 
